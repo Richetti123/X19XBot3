@@ -22,11 +22,11 @@ const rl = createInterface(process.stdin, process.stdout)
 //const app = express()
 //const port = process.env.PORT || 8080;
 
-say('Gata\nBot\nMD', {
+say('Michi\nBot', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Por GataDios`, {
+say(`Por Richetti y GeriPium`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']})
@@ -86,13 +86,13 @@ console.log(chalk.yellow(`╭${lineM}
 ┊${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
 ┊${chalk.blueBright('┊')} ${chalk.blue.bold(`🟢INFORMACIÓN :`)}
 ┊${chalk.blueBright('┊')} ${chalk.blueBright('┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
-┊${chalk.blueBright('┊')}${chalk.cyan(`💚 Nombre: ${packageJsonObj.name}`)}
+┊${chalk.blueBright('┊')}${chalk.cyan(`💚 Nombre: MichiBot`)}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`𓃠 Versión: ${packageJsonObj.version}`)}
-┊${chalk.blueBright('┊')}${chalk.cyan(`💜 Descripción: ${packageJsonObj.description}`)}
-┊${chalk.blueBright('┊')}${chalk.cyan(`😺 Project Author: ${packageJsonObj.author.name} (@gata_dios)`)}
+┊${chalk.blueBright('┊')}${chalk.cyan(`💜 Descripción: El mejor bot de whatsapp`)}
+┊${chalk.blueBright('┊')}${chalk.cyan(`😺 Project Author: Richetti (@richetti_123)`)}
 ┊${chalk.blueBright('┊')}${chalk.blueBright('┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
 ┊${chalk.blueBright('┊')}${chalk.yellow(`💜 Colaborador:`)}
-┊${chalk.blueBright('┊')}${chalk.yellow(`• elrebelde21 (Mario ofc)`)}
+┊${chalk.blueBright('┊')}${chalk.yellow(`• GeriPium `)}
 ┊${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
 ┊${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`⏰ Hora Actual :`)}
