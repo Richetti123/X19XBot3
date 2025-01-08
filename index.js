@@ -26,7 +26,7 @@ say('Michi\nBot', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Por Richetti y GeriPium`, {
+say(`Creado por:\nRichetti (+56928561853)\nY\nGeriPium(+56941827124)`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']})
