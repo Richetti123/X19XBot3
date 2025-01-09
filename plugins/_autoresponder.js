@@ -60,8 +60,8 @@ O únete al grupo de soporte en WhatsApp: https://chat.whatsapp.com/BEh3wICepoo9
 
 Si alguien te menciona algo de los precios o de comprar el bot o algo parecido dile esto:
 Tenemos múltiples servicios de MichiBot
-wa.me/56941827124
-wa.me/56928561853
+wa.me/56941827124 (GeriPium)
+wa.me/56928561853 (Richetti)
 1 grupo permanente 
 6🇵🇪 1500🇦🇷🇨🇱 40🇲🇽 1.5🇺🇸
 2 grupos permanentes + 1 grupo de regalo
