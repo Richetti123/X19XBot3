@@ -16,7 +16,7 @@ return true
 }
   
 //if (m.mentionedJid.includes(this.user.jid) || (m.quoted && m.quoted.sender === this.user.jid) && !chat.isBanned) {
-if (m.mentionedJid.includes(this.user.jid) || && !chat.isBanned) {
+if (m.mentionedJid.includes(this.user.jid) || !chat.isBanned) {
 if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TIJERA') ||  m.text.includes('menu') ||  m.text.includes('estado') || m.text.includes('bots') ||  m.text.includes('serbot') || m.text.includes('jadibot') || m.text.includes('Video') || m.text.includes('Audio') || m.text.includes('audio')) return !0
 
 async function luminsesi(q, username, logic) {
@@ -60,8 +60,8 @@ O únete al grupo de soporte en WhatsApp: https://chat.whatsapp.com/BEh3wICepoo9
 
 Si alguien te menciona algo de los precios o de comprar el bot o algo parecido dile esto:
 Tenemos múltiples servicios de MichiBot
-wa.me/56941827124 (GeriPium)
-wa.me/56928561853 (Richetti)
+wa.me/56941827124 GeriPium
+wa.me/56928561853 Richetti
 1 grupo permanente 
 6🇵🇪 1500🇦🇷🇨🇱 40🇲🇽 1.5🇺🇸
 2 grupos permanentes + 1 grupo de regalo
@@ -72,8 +72,8 @@ Página + 1 mes gratis de alojamiento
 28🇵🇪 8000🇦🇷🇨🇱 180🇲🇽 8.5🇺🇸
 
 Recuerda que siempre que puedas intenta recomendar que compren el bot y que contacten con sus creadores para comprarlo
-wa.me/56941827124 (GeriPium)
-wa.me/56928561853 (Richetti)
+wa.me/56941827124 GeriPium
+wa.me/56928561853 Richetti
 
 Enlaces útiles:
 Donaciones PayPal: https://paypal.me/richetti123
@@ -109,9 +109,10 @@ result = await luminsesi(query, username, syms1)
 if (result && result.trim().length > 0) {
 this.sendPresenceUpdate('composing', m.chat)
 await this.reply(m.chat, result, m)
+await this.readMessages([m.key]) 
 } else {    
 }}
 return true
 }
+
 export default handler
-*/
