@@ -93,8 +93,6 @@ const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp4?url=${userVideoDa
 let { data } = await res.json();
 await conn.sendMessage(m.chat, { video: { url: data.dl }, fileName: `video.mp4`, mimetype: 'video/mp4', caption: `⟡ *${userVideoData.title}*\n> ${wm}`}, { quoted: m || null })
 } catch (error){
-let y=await ytdlf(`${userVideoData.url}`,"360");
-await conn.sendMessage(m.chat, { video: { url:y.downloadUrl }, fileName: `video.mp4`, mimetype: 'video/mp4', caption: `⟡ *${userVideoData.title}*\n> ${wm}`}, { quoted: m || null })
 }
 }
 } catch (error) {
