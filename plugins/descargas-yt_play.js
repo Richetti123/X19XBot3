@@ -70,35 +70,38 @@ if (!userVideoData || !userVideoData.url) return conn.reply(m.chat, '❌ NO HAY 
 try {
 if (text === '🎶' || text === 'audio') {
 await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, fkontak, m || null)
-try{
-let x=await ytdlf(`${userVideoData.url}`,"mp3");
-await conn.sendMessage(m.chat, { audio: { url:x.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
+try {    
+const apidownload = await axios.get(`https://api-rin-tohsaka.vercel.app/download/ytmp3?url=${yt_play[0].url}`)
+const responsev2 = await apidownload.data.data.download;
+await conn.sendMessage(m.chat, { audio: { url: responsev2 }, mimetype: 'audio/mpeg' }, { quoted: m });
 } catch (e1) {
-try{
-let x=await ytdlf(`${userVideoData.url}`,"mp3");
-await conn.sendMessage(m.chat, { audio: { url:x.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
+try {    
+const apidownload = await axios.get(`https://api-rin-tohsaka.vercel.app/download/ytmp3?url=${yt_play[0].url}`)
+const responsev2 = await apidownload.data.data.download;
+await conn.sendMessage(m.chat, { audio: { url: responsev2 }, mimetype: 'audio/mpeg' }, { quoted: m });
 } catch (e1) {
-try{
-let x=await ytdlf(`${userVideoData.url}`,"mp3");
-await conn.sendMessage(m.chat, { audio: { url:x.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
+try {    
+const apidownload = await axios.get(`https://api-rin-tohsaka.vercel.app/download/ytmp3?url=${yt_play[0].url}`)
+const responsev2 = await apidownload.data.data.download;
+await conn.sendMessage(m.chat, { audio: { url: responsev2 }, mimetype: 'audio/mpeg' }, { quoted: m });
 } catch (e1) {
 }}}
 } else if (text === '📽' || text === 'video') {
 await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsVid, fkontak, m || null)
 try{
-const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp4?url=${yt_play[0].url}`);
-let { data } = await res.json();
-await conn.sendMessage(m.chat, { video: { url: data.dl }, fileName: `video.mp4`, mimetype: 'video/mp4', caption: `⟡ *${userVideoData.title}*\n> ${wm}`}, { quoted: m || null })
+const apidownload = await axios.get(`https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${yt_play[0].url}`)
+const responsev2 = await apidownload.data.data.download;
+await conn.sendMessage(m.chat, { video: { url: responsev2 }, mimetype: 'video/mp4', caption: `*AQUI ESTA SU VIDEO*\n> ${wm}`} }, { quoted: m });
 } catch (e2) {
 try{
-const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp4?url=${yt_play[0].url}`);
-let { data } = await res.json();
-await conn.sendMessage(m.chat, { video: { url: data.dl }, fileName: `video.mp4`, mimetype: 'video/mp4', caption: `⟡ *${userVideoData.title}*\n> ${wm}`}, { quoted: m || null })
+const apidownload = await axios.get(`https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${yt_play[0].url}`)
+const responsev2 = await apidownload.data.data.download;
+await conn.sendMessage(m.chat, { video: { url: responsev2 }, mimetype: 'video/mp4', caption: `*AQUI ESTA SU VIDEO*\n> ${wm}`} }, { quoted: m });
 } catch (e2) {
 try{
-const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp4?url=${yt_play[0].url}`);
-let { data } = await res.json();
-await conn.sendMessage(m.chat, { video: { url: data.dl }, fileName: `video.mp4`, mimetype: 'video/mp4', caption: `⟡ *${userVideoData.title}*\n> ${wm}`}, { quoted: m || null })
+const apidownload = await axios.get(`https://api-rin-tohsaka.vercel.app/download/ytmp4?url=${yt_play[0].url}`)
+const responsev2 = await apidownload.data.data.download;
+await conn.sendMessage(m.chat, { video: { url: responsev2 }, mimetype: 'video/mp4', caption: `*AQUI ESTA SU VIDEO*\n> ${wm}`} }, { quoted: m });
 } catch (e2) {
 let y=await ytdlf(`${userVideoData.url}`,"360");
 await conn.sendMessage(m.chat, { video: { url:y.downloadUrl }, fileName: `video.mp4`, mimetype: 'video/mp4', caption: `⟡ *${userVideoData.title}*\n> ${wm}`}, { quoted: m || null })
