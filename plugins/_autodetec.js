@@ -12,17 +12,20 @@ let chat = global.db.data.chats[m.chat]
 let users = participants.map(u => conn.decodeJid(u.id))
 const groupAdmins = participants.filter(p => p.admin)
 const listAdmin = groupAdmins.map((v, i) => `*» ${i + 1}. @${v.id.split('@')[0]}*`).join('\n')
-if (chat.detect && m.messageStubType == 2) {
-const chatId = m.isGroup ? m.chat : m.sender;
-const uniqid = chatId.split('@')[0];
-const sessionPath = './MichiBot/';
-const files = await fs.readdir(sessionPath);
-let filesDeleted = 0;
-for (const file of files) {
+/*if (chat.detect && m.messageStubType == 2) {
+const uniqid = (m.isGroup ? m.chat : m.sender).split('@')[0]
+const sessionPath = './GataBotSession/'
+for (const file of await fs.readdir(sessionPath)) {
 if (file.includes(uniqid)) {
-await fs.unlink(path.join(sessionPath, file));
-filesDeleted++;
-console.log(`⚠️ Eliminacion session (PreKey) que provocan el undefined el chat`)}}}
+await fs.unlink(path.join(sessionPath, file))
+console.log(`${chalk.yellow.bold('[ ⚠️ Archivo Eliminado ]')} ${chalk.greenBright(`'${file}'`)}\n` +
+`${chalk.blue('(Session PreKey)')} ${chalk.redBright('que provoca el "undefined" en el chat')}`
+)
+}}
+
+} else */
+
+
 if (chat.detect && m.messageStubType == 21) {
 await this.sendMessage(m.chat, { text: lenguajeGB['smsAvisoAG']() + mid.smsAutodetec1(usuario, m), mentions: [m.sender], mentions: [...groupAdmins.map(v => v.id)] }, { quoted: fkontak })   
 } else if (chat.detect && m.messageStubType == 22) {
