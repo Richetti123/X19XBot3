@@ -70,20 +70,17 @@ if (!userVideoData || !userVideoData.url) return conn.reply(m.chat, '❌ NO HAY 
 try {
 if (text === '🎶' || text === 'audio') {
 await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, fkontak, m || null)
-try {    
-const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp3?url=${yt_play[0].url}`);
-let { data } = await res.json();
-await conn.sendMessage(m.chat, data.dl, 'default.mp3', null, m, false, { mimetype: 'audio/mpeg' });
+try{
+let x=await ytdlf(`${userVideoData.url}`,"mp3");
+await conn.sendMessage(m.chat, { audio: { url:x.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
 } catch (e1) {
-try {    
-const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp3?url=${yt_play[0].url}`);
-let { data } = await res.json();
-await conn.sendMessage(m.chat, data.dl, 'default.mp3', null, m, false, { mimetype: 'audio/mpeg' });
+try{
+let x=await ytdlf(`${userVideoData.url}`,"mp3");
+await conn.sendMessage(m.chat, { audio: { url:x.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
 } catch (e1) {
-try {    
-const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp3?url=${yt_play[0].url}`);
-let { data } = await res.json();
-await conn.sendMessage(m.chat, data.dl, 'default.mp3', null, m, false, { mimetype: 'audio/mpeg' });
+try{
+let x=await ytdlf(`${userVideoData.url}`,"mp3");
+await conn.sendMessage(m.chat, { audio: { url:x.downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
 } catch (e1) {
 }}}
 } else if (text === '📽' || text === 'video') {
