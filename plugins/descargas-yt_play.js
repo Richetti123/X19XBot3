@@ -105,10 +105,7 @@ await conn.sendMessage(m.chat, { video: { url: data.dl }, fileName: `video.mp4`,
 } catch {
 }}}
 console.error(error);
-} finally {
-delete tempStorage[m.sender];
-}
-}
+}}}
 handler.command = /^(play|play2)$/i
 //handler.limit = 2
 handler.register = true 
