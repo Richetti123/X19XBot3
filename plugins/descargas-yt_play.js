@@ -85,7 +85,7 @@ const res = await fetch(`https://api.siputzx.my.id/api/d/ytmp3?url=${yt_play[0].
 let { data } = await res.json();
 await conn.sendMessage(m.chat, { audio: { url: data.dl }, mimetype: 'audio/mpeg' }, { quoted: m ||null });
 } catch (error) {
-}
+}}}
 } else if (text === '📽' || text === 'video') {
 await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsVid, fkontak, m || null)
 try{
